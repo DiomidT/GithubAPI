@@ -1,2 +1,2 @@
 # GithubAPI
-RXjs GitHub API
+RxJs GitHub API
