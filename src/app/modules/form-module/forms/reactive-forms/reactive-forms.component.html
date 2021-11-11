@@ -1,0 +1,12 @@
+<div class=" input-group w-100 mb-3 pt-1 d-flex justify-content-center">
+    <input  type="text" class="form-control w-25"
+           placeholder="Repo name" aria-label="Username"
+           aria-describedby="basic-addon1" [formControl]="git">
+</div>
+
+<div class="row d-flex justify-content-center overflow-auto mt-5">
+    <div class="col-6 offset-s3">
+        <app-card-item class=" mb-2" *ngFor="let repo of usersGit$ | async" [card]="repo" (showDetails)="showDetails($event)">
+        </app-card-item>
+    </div>
+</div>

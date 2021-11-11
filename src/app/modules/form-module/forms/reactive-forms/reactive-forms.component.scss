@@ -1,0 +1,22 @@
+@import "./src/app/styles/variables";
+
+.wrap {
+    background-color: $body-bg;
+    height: calc(100% - 58px);
+    overflow: auto;
+}
+input {
+    &.ng-invalid {
+        border: 5px solid rebeccapurple;
+    }
+
+    &.ng-touched {
+        border: 5px solid cyan;
+    }
+}
+
+.validation {
+    height: 30px;
+    min-height: 30px;
+    color: azure;
+}

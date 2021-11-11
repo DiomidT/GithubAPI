@@ -1,0 +1,15 @@
+<div class="row mb-2">
+    <div class="col s12 m6">
+        <div class="card blue-grey darken- darken-1 d-flex test-search">
+            <div class="card-content white-text test ">
+                <span class="card-title"> <span class="font-weight-bold">Name:</span> {{card?.name}}</span>
+                <p class="test-search"><span class="font-weight-bold">Full Name:</span> {{card?.full_name}}</p>
+                <p class="test-search" *ngIf="detailsView"><span class="font-weight-bold">Description:</span> {{card?.description}}</p>
+            </div>
+            <div class="card-action test-find-class "  *ngIf="!detailsView">
+                <a [href]="card?.git_url" >This is a link for repo</a>
+                <button type="button" class="btn btn-outline-dark m-2" (click)="showDetails.emit(card)">Details</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Angular Wiki</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse show" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto d-flex flex-wrap">
+            <li class="nav-item mr-1 mb-2" *ngFor="let link of linkArr">
+                <div ngbDropdown>
+                    <button class="btn btn-outline-primary"
+                            id="dropdownBasic1" ngbDropdownToggle>{{ link.title }}</button>
+                    <div ngbDropdownMenu>
+                        <button ngbDropdownItem *ngFor="let l of link.linkArr" [routerLink]="l.link" >{{ l.title }}</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+<!--        <form class="form-inline my-2 my-lg-0">-->
+<!--            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
+<!--            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>-->
+<!--        </form>-->
+    </div>
+</nav>
+
+<div class="row col-12">
+    <a [routerLink]="['/']" routerLinkActive="active" class=""></a>
+</div>
+<router-outlet></router-outlet>

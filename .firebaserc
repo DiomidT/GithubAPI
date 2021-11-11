@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ergoproxy-71078": {
+      "hosting": {
+        "project-for-tests": [
+          "ergoproxy-71078"
+        ]
+      }
+    }
+  }
+}
